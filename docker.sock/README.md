@@ -7,7 +7,7 @@
 $docker container run --rm -v /var/run/docker.sock:/var/run/docker.sock -it alpine:latest /bin/sh
 ```
 コンテナにdockerをインストールする。
-```
+```shell
 / # apk update && apk add docker
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86_64/APKINDEX.tar.gz
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/community/x86_64/APKINDEX.tar.gz
