@@ -1,4 +1,3 @@
-# Docker API
 # Docker Remote API
 Docker Remote APIをTLSクライアント認証を介さずにアクセスできるようにすると危険である。
 
