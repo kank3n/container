@@ -63,7 +63,7 @@ Content-Length: 74
 {"Id":"17f0102875c58525c17c5e05a6c2f1a15940de03c4ea98fb860b3064d4548112"}
 ```
 
-レスポンスに含まれるexec id`17f0102875c58525c17c5e05a6c2f1a15940de03c4ea98fb860b3064d4548112`を指定してコマンドを実行する。
+レスポンスに含まれるexec id`17f0102875c58525c17c5e05a6c2f1a15940de03c4ea98fb860b3064d4548112`を指定してコマンドを実行する。コンテナ内で`cat /etc/passwd`が実行されその結果が出力される。
 ```
 $ curl -i -s -X POST -H 'Content-Type: application/json' --data-binary '{"Detach": false,"Tty": false}' http://localhost:2376/exec/17f0102875c58525c17c5e05a6c2f1a15940de03c4ea98fb860b3064d4548112/start
 HTTP/1.1 200 OK
