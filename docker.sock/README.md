@@ -3,7 +3,7 @@
 /var/run/docker.sockはdockerdと通信するためのunixソケットである。コンテナからホストOSの/var/run/docker.sockに書き込み権限があるとホストOSのrootに権限昇格が可能になる。
 
 /var/run/docker.sockをマウントしてコンテナを起動する。
-```
+```shell
 $docker container run --rm -v /var/run/docker.sock:/var/run/docker.sock -it alpine:latest /bin/sh
 ```
 コンテナにdockerをインストールする。
