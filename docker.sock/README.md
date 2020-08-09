@@ -1,6 +1,8 @@
 
-/var/run/docker.sockをマウントしてコンテナを起動する。
+# /var/run/docker.sockを晒してはいけな
+/var/run/docker.sockはdockerdと通信するためのunixソケットである。コンテナからホストOSの/var/run/docker.sockに書き込み権限があるとホストOSにrootに権限昇格が可能になる。
 
+/var/run/docker.sockをマウントしてコンテナを起動する。
 ```
 $docker container run --rm -v /var/run/docker.sock:/var/run/docker.sock -it alpine:latest /bin/sh
 ```
