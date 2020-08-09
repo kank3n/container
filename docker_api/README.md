@@ -1,5 +1,5 @@
-# Docker Remote API
-Docker Remote APIをTLSクライアント認証を介さずにアクセスできるようにすると危険である。
+# Docker Remote API経由でのコンテナ操作
+Docker Remote APIをTLSクライアント認証を介さずにアクセスできるようにすると危険である。API経由で任意のコンテナ立ち上げや既存コンテナ内でのコマンド実行など色々と出来てしまうからである。
 
 dockerをtcpソケットでもアクセスできるようオプションを追加して起動する。tcpソケットは外部に公開すると危険なのでlocal loopback(127.0.0.1)のみに限定する。この追加したtcpソケットに対してREST APIで操作可能になる。
 ```
