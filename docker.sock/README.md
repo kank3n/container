@@ -1,5 +1,5 @@
 
-# /var/run/docker.sockを晒してはいけな
+# /var/run/docker.sockを公開してはいけない
 /var/run/docker.sockはdockerdと通信するためのunixソケットである。コンテナからホストOSの/var/run/docker.sockに書き込み権限があるとホストOSにrootに権限昇格が可能になる。
 
 /var/run/docker.sockをマウントしてコンテナを起動する。
